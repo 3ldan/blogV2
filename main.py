@@ -68,8 +68,8 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 with app.app_context():
-    #db.create_all()
     try:
+        db.create_all()
         hash_and_salted_password = generate_password_hash(
             "admin123",
             method='pbkdf2:sha256',
