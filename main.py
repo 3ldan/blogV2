@@ -83,7 +83,7 @@ with app.app_context():
         db.session.add(new_user)
         db.session.commit()
     except:
-        print("Admin creation failed")
+        print("Admin not created")
 
 @login_manager.user_loader
 def load_user(user_id):
