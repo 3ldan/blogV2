@@ -114,7 +114,7 @@ def updateBlogData():
             img_url=imageURL,
             img_thumb=imageThumb,
             author_id=1,
-            date=i["created_at"][:10]
+            date=i["updated_at"][:10]
         )
         db.session.add(new_post)
     db.session.commit()
