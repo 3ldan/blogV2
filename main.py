@@ -131,6 +131,9 @@ def register():
     form = RegisterForm()
     if form.validate_on_submit():
         email = form.email.data
+        print(form.name.data)
+        print(form.email.data)
+        print(form.password.data)
         if not User.query.filter_by(email=email).first():
             hash_and_salted_password = generate_password_hash(
                 form.password.data,
