@@ -68,7 +68,7 @@ class Comment(db.Model):
     text = db.Column(db.Text, nullable=False)
 
 with app.app_context():
-    db.create_all()
+    #db.create_all()
     try:
         hash_and_salted_password = generate_password_hash(
             "admin123",
